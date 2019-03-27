@@ -141,8 +141,8 @@ class TutorialViewController: UIViewController, ARSCNViewDelegate {
         if let hitTestResult = hitResults.first{
             let transform = hitTestResult.worldTransform
             let position = SCNVector3(x: transform.columns.3.x, y: transform.columns.3.y, z: transform.columns.3.z)
-//            let earthNode = EarthNodeClass(0.05)
-//            earthNode.position = position
+            let earthNode = EarthNodeClass(0.05)
+            earthNode.position = position
             
                 
                 // finally the box is added to the scene.
@@ -166,7 +166,7 @@ class TutorialViewController: UIViewController, ARSCNViewDelegate {
         DispatchQueue.main.async {
             print("Plane was detected")
         }
-        let container = SCNScene(named: "mesh.dae", inDirectory: "art.scnassets")
+        let container = SCNScene(named: "fightRomanSoldier.scn", inDirectory: "art.scnassets")
         print(container?.rootNode.name)
 
         
